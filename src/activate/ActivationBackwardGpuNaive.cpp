@@ -8,7 +8,7 @@
 #include <stdexcept>
 #include <cstring>
 
-#include "EasyCL.h"
+#include <EasyCL.h>
 #include "activate/ActivationBackward.h"
 #include "util/StatefulTimer.h"
 #include "util/stringhelper.h"
@@ -17,6 +17,8 @@
 #include "activate/ActivationBackwardGpuNaive.h"
 
 using namespace std;
+using namespace easycl;
+using namespace easycl;
 
 #undef VIRTUAL
 #define VIRTUAL 

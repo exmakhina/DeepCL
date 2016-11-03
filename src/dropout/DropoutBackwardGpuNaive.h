@@ -13,8 +13,8 @@
 
 class DropoutBackwardGpuNaive : public DropoutBackward {
 public:
-    CLKernel *kernel;
-//    CLKernel *kMemset;
+    easycl::CLKernel *kernel;
+//    easycl::CLKernel * kMemset;
 
     // [[[cog
     // import cog_addheaders
@@ -24,10 +24,10 @@ public:
     VIRTUAL ~DropoutBackwardGpuNaive();
     VIRTUAL void backward(
     int batchSize,
-    CLWrapper *maskWrapper,
-    CLWrapper *gradOutputWrapper,
-    CLWrapper *gradInputWrapper);
-    DropoutBackwardGpuNaive(EasyCL *cl, int numPlanes, int inputSize, float dropRatio);
+    easycl::CLWrapper *maskWrapper,
+    easycl::CLWrapper *gradOutputWrapper,
+    easycl::CLWrapper *gradInputWrapper);
+    DropoutBackwardGpuNaive(easycl::EasyCL *cl, int numPlanes, int inputSize, float dropRatio);
 
     // [[[end]]]
 };

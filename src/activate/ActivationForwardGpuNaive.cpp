@@ -7,7 +7,7 @@
 #include <iostream>
 #include <cstring>
 
-#include "EasyCL.h"
+#include <EasyCL.h>
 
 #include "util/StatefulTimer.h"
 #include "util/stringhelper.h"
@@ -18,6 +18,7 @@
 //#include "test/PrintBuffer.h"
 
 using namespace std;
+using namespace easycl;
 
 #undef VIRTUAL
 #define VIRTUAL 

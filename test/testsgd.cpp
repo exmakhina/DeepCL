@@ -27,6 +27,7 @@
 #include "trainers/SGD.h"
 
 using namespace std;
+using namespace easycl;
 
 TEST( testsgd, basic ) {
     // this is mostly to help me figure out how to design the SGD and Trainer classes

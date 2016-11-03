@@ -10,6 +10,7 @@
 #include "gtest/gtest.h"
 
 using namespace std;
+using namespace easycl;
 
 #include "test/gtest_supp.h"
 

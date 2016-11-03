@@ -9,6 +9,7 @@
 #include "RandomPatchesMaker.h"
 
 using namespace std;
+using namespace easycl;
 
 Layer *RandomPatchesMaker::createLayer(Layer *previousLayer) {
     return new RandomPatches(previousLayer, this);

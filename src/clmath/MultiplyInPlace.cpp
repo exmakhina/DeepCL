@@ -6,12 +6,14 @@
 
 #include <iostream>
 
-#include "EasyCL.h"
+#include <EasyCL.h>
+
 #include "util/StatefulTimer.h"
 #include "MultiplyInPlace.h"
 #include "util/stringhelper.h"
 
 using namespace std;
+using namespace easycl;
 
 #undef STATIC
 #undef VIRTUAL
@@ -128,6 +130,7 @@ MultiplyInPlace::MultiplyInPlace(EasyCL *cl) :
 #include "MultiplyInPlace.h"
 
 using namespace std;
+using namespace easycl;
 
 #undef STATIC
 #undef VIRTUAL

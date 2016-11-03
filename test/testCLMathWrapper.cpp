@@ -13,6 +13,7 @@
 #include "test/WeightRandomizer.h"
 
 using namespace std;
+using namespace easycl;
 
 TEST(testCLMathWrapper, assign) {
     EasyCL *cl = DeepCLGtestGlobals_createEasyCL();

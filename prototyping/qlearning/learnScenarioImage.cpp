@@ -10,6 +10,7 @@
 #include "qlearning/QLearner.h"
 
 using namespace std;
+using namespace easycl;
 
 int main( int argc, char *argv[] ) {
 //    ScenarioImage scenario;

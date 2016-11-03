@@ -15,6 +15,7 @@
 #include "test/WeightRandomizer.h"
 
 using namespace std;
+using namespace easycl;
 
 TEST( testpoolingbackward, basic ) {
     int batchSize = 1;

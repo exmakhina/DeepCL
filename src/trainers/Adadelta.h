@@ -14,8 +14,8 @@
 #include "trainers/Trainer.h"
 
 class AdadeltaState;
-class CLWrapper;
-class EasyCL;
+
+#include <EasyCL.h>
 class OutputData;
 
 #include "DeepCLDllExport.h"
@@ -35,7 +35,7 @@ public:
     // generated, using cog:
     VIRTUAL ~Adadelta();
     VIRTUAL std::string asString();
-    VIRTUAL void updateWeights(CLWrapper *weightsWrapper, CLWrapper *gradWeightsWrapper,
+    VIRTUAL void updateWeights(easycl::CLWrapper *weightsWrapper, easycl::CLWrapper *gradWeightsWrapper,
     AdadeltaState *trainerState);
     VIRTUAL BatchResult trainNet(NeuralNet *net, TrainingContext *context,
     float const*input, OutputData *outputData);
@@ -44,8 +44,8 @@ public:
     VIRTUAL BatchResult trainNetFromLabels(NeuralNet *net, TrainingContext *context,
     float const*input, int const*labels);
     VIRTUAL void bindState(NeuralNet *net);
-    STATIC Adadelta *instance(EasyCL *cl, float decay);
-    Adadelta(EasyCL *cl, float decay);
+    STATIC Adadelta *instance(easycl::EasyCL *cl, float decay);
+    Adadelta(easycl::EasyCL *cl, float decay);
 
     // [[[end]]]
 };

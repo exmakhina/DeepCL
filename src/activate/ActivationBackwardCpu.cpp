@@ -8,7 +8,7 @@
 #include <stdexcept>
 #include <cstring>
 
-#include "EasyCL.h"
+#include <EasyCL.h>
 #include "activate/ActivationBackward.h"
 #include "util/StatefulTimer.h"
 #include "activate/ActivationFunction.h"
@@ -16,6 +16,8 @@
 #include "activate/ActivationBackwardCpu.h"
 
 using namespace std;
+using namespace easycl;
+using namespace easycl;
 
 #undef VIRTUAL
 #define VIRTUAL 

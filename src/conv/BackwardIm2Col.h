@@ -1,7 +1,7 @@
 #pragma once
 
 #include "Backward.h"
-#include "EasyCL.h"
+#include <EasyCL.h>
 
 #include "DeepCLDllExport.h"
 
@@ -13,11 +13,11 @@ class Im2Col;
 class DeepCL_EXPORT BackwardIm2Col : public Backward {
     private:
     Im2Col *im2Col;
-//    CLKernel *kernelCol2Im;
+//    easycl::CLKernel * kernelCol2Im;
 //    AddBias *addBias;
 
     float *columns;
-    CLWrapper *columnsWrapper;
+    easycl::CLWrapper *columnsWrapper;
     int numKernels;
 
     // [[[cog
@@ -27,11 +27,11 @@ class DeepCL_EXPORT BackwardIm2Col : public Backward {
     // generated, using cog:
 
     public:
-    BackwardIm2Col(EasyCL *cl, LayerDimensions dim);
+    BackwardIm2Col(easycl::EasyCL *cl, LayerDimensions dim);
     VIRTUAL ~BackwardIm2Col();
     VIRTUAL void backward(int batchSize,
-        CLWrapper *inputDataWrapper, CLWrapper *gradOutputWrapper, CLWrapper *weightsWrapper,
-    CLWrapper *gradInputWrapper);
+        easycl::CLWrapper *inputDataWrapper, easycl::CLWrapper *gradOutputWrapper, easycl::CLWrapper *weightsWrapper,
+    easycl::CLWrapper *gradInputWrapper);
 
     // [[[end]]]
 };

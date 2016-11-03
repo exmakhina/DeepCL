@@ -9,6 +9,7 @@
 #include "batch/BatchData.h"
 
 using namespace std;
+using namespace easycl;
 
 #undef VIRTUAL
 #undef STATIC

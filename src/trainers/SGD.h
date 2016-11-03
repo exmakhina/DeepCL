@@ -14,9 +14,9 @@
 #include "trainers/Trainer.h"
 
 class SGDState;
-class CLWrapper;
-class EasyCL;
 class OutputData;
+
+#include <EasyCL.h>
 
 #include "DeepCLDllExport.h"
 
@@ -49,7 +49,7 @@ public:
     VIRTUAL void setMomentum(float momentum);
     VIRTUAL void setWeightDecay(float weightDecay);
     VIRTUAL std::string asString();
-    VIRTUAL void updateWeights(CLWrapper *weightsWrapper, CLWrapper *gradWeightsWrapper,
+    VIRTUAL void updateWeights(easycl::CLWrapper *weightsWrapper, easycl::CLWrapper *gradWeightsWrapper,
     SGDState *trainerState);
     VIRTUAL BatchResult trainNet(NeuralNet *net, TrainingContext *context,
     float const*input, OutputData *outputData);
@@ -58,9 +58,9 @@ public:
     VIRTUAL BatchResult trainNetFromLabels(NeuralNet *net, TrainingContext *context,
     float const*input, int const*labels);
     VIRTUAL void bindState(NeuralNet *net);
-    STATIC SGD *instance(EasyCL *cl, float learningRate);
-    STATIC SGD *instance(EasyCL *cl, float learningRate, float momentum);
-    SGD(EasyCL *cl);
+    STATIC SGD *instance(easycl::EasyCL *cl, float learningRate);
+    STATIC SGD *instance(easycl::EasyCL *cl, float learningRate, float momentum);
+    SGD(easycl::EasyCL *cl);
 
     // [[[end]]]
 };

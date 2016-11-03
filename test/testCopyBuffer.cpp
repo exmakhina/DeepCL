@@ -4,7 +4,8 @@
 // v. 2.0. If a copy of the MPL was not distributed with this file, You can 
 // obtain one at http://mozilla.org/MPL/2.0/.
 
-#include "EasyCL.h"
+#include <EasyCL.h>
+
 #include "test/CopyBuffer.h"
 #include "test/PrintBuffer.h"
 
@@ -12,6 +13,7 @@
 #include "test/gtest_supp.h"
 
 using namespace std;
+using namespace easycl;
 
 TEST(testCopyBuffer, floats) {
     EasyCL *cl = DeepCLGtestGlobals_createEasyCL();

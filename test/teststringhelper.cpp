@@ -12,6 +12,7 @@
 #include "test/gtest_supp.h"
 
 using namespace std;
+using namespace easycl;
 
 TEST( teststringhelper, split ) {
     string mystring = "MP10";

@@ -13,8 +13,8 @@
 
 #include "trainers/TrainerState.h"
 
-class EasyCL;
-class CLKernel;
+#include <EasyCL.h>
+
 
 #include "DeepCLDllExport.h"
 
@@ -35,10 +35,10 @@ public:
     const int numWeights;
 
     float *lastUpdate;
-    CLWrapper *lastUpdateWrapper;
+    easycl::CLWrapper *lastUpdateWrapper;
 
     float *oldWeights;
-    CLWrapper *oldWeightsWrapper;
+    easycl::CLWrapper *oldWeightsWrapper;
 
     // [[[cog
     // import cog_addheaders
@@ -46,7 +46,7 @@ public:
     // ]]]
     // generated, using cog:
     VIRTUAL ~NesterovState();
-    NesterovState(EasyCL *cl, int numWeights);
+    NesterovState(easycl::EasyCL *cl, int numWeights);
 
     // [[[end]]]
 };

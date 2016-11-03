@@ -9,6 +9,7 @@
 #include "conv/ConvolutionalMaker.h"
 
 using namespace std;
+using namespace easycl;
 
 Layer *ConvolutionalMaker::createLayer(Layer *previousLayer) {
     if(_numFilters == 0) {

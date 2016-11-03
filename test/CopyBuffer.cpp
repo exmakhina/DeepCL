@@ -14,6 +14,7 @@
 #include <algorithm>
 
 using namespace std;
+using namespace easycl;
 
 void CopyBuffer::copy( EasyCL *cl, CLWrapper *sourceWrapper, float *target ) {
     // first we will copy it to another buffer, so we can copy it out

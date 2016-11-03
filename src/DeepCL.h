@@ -3,7 +3,7 @@
 // convenience header, to include what we need, without causing whole world to rebuild
 // at the same time :-) (cf, if we put in NeuralNet.h)
 
-#include "EasyCL.h"
+#include <EasyCL.h>
 
 #include "netdef/NetdefToNet.h"
 #include "net/Trainable.h"
@@ -44,7 +44,7 @@
 #define STATIC static
 #define VIRTUAL virtual
 
-class DeepCL_EXPORT DeepCL : public EasyCL {
+class DeepCL_EXPORT DeepCL : public easycl::EasyCL {
 public:
 //    EasyCL *cl;
     ClBlasInstance clBlasInstance;

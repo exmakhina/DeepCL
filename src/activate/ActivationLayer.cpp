@@ -4,6 +4,8 @@
 // v. 2.0. If a copy of the MPL was not distributed with this file, You can 
 // obtain one at http://mozilla.org/MPL/2.0/.
 
+#include <EasyCL.h>
+
 #include "net/NeuralNet.h"
 #include "util/stringhelper.h"
 #include "CppRuntimeBoundary.h"
@@ -14,13 +16,14 @@
 #include "activate/ActivationBackward.h"
 
 using namespace std;
+using namespace easycl;
 
 #undef VIRTUAL
 #define VIRTUAL
 #undef STATIC
 #define STATIC
 
-ActivationLayer::ActivationLayer(EasyCL *cl, Layer *previousLayer, ActivationMaker *maker) :
+ActivationLayer::ActivationLayer(easycl::EasyCL *cl, Layer *previousLayer, ActivationMaker *maker) :
         Layer(previousLayer, maker),
         numPlanes (previousLayer->getOutputPlanes()),
         inputSize(previousLayer->getOutputSize()),

@@ -1,4 +1,4 @@
-#include "EasyCL.h"
+#include <EasyCL.h>
 #include "util/stringhelper.h"
 #include "util/StatefulTimer.h"
 
@@ -13,6 +13,7 @@
 #include "clmath/CLMathWrapper.h"
 
 using namespace std;
+using namespace easycl;
 
 #undef STATIC
 #define STATIC 

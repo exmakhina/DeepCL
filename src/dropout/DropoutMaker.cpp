@@ -8,6 +8,7 @@
 #include "DropoutMaker.h"
 
 using namespace std;
+using namespace easycl;
 
 Layer *DropoutMaker::createLayer(Layer *previousLayer) {
     return new DropoutLayer(cl, previousLayer, this);

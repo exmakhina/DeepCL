@@ -16,6 +16,7 @@
 #include "test/gtest_supp.h"
 
 using namespace std;
+using namespace easycl;
 
 TEST(SLOW_testNorbLoader, loadall) {
     int N;

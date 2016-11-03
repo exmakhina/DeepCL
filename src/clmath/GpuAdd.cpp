@@ -6,11 +6,13 @@
 
 #include <iostream>
 
+#include <EasyCL.h>
+
 #include "util/StatefulTimer.h"
-#include "EasyCL.h"
 #include "clmath/GpuAdd.h"
 
 using namespace std;
+using namespace easycl;
 
 #undef STATIC
 #undef VIRTUAL

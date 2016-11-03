@@ -14,6 +14,7 @@
 #include "DimFromArgs.h"
 
 using namespace std;
+using namespace easycl;
 
 void DimFromArgs::arg( LayerDimensions *p_dim ) {
     TestArgsParser::arg( "inputplanes", &(p_dim->inputPlanes) );

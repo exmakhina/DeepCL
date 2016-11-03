@@ -7,7 +7,7 @@
 #include <iostream>
 #include <stdexcept>
 
-#include "EasyCL.h"
+#include <EasyCL.h>
 #include "util/stringhelper.h"
 #include "util/StatefulTimer.h"
 
@@ -17,6 +17,8 @@
 #include "activate/ActivationBackward.h"
 
 using namespace std;
+using namespace easycl;
+using namespace easycl;
 
 #undef VIRTUAL
 #define VIRTUAL 

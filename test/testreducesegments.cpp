@@ -16,6 +16,7 @@
 #include "conv/ReduceSegments.h"
 
 using namespace std;
+using namespace easycl;
 
 TEST( testreducesegments, basic ) {
     EasyCL *cl = DeepCLGtestGlobals_createEasyCL();

@@ -11,11 +11,11 @@
 #define VIRTUAL virtual
 #define STATIC static
 
-class CLKernel;
+
 
 class PoolingForwardGpuNaive : public PoolingForward {
 public:
-    CLKernel *kernel;
+    easycl::CLKernel *kernel;
 
     // [[[cog
     // import cog_addheaders
@@ -23,8 +23,8 @@ public:
     // ]]]
     // generated, using cog:
     VIRTUAL ~PoolingForwardGpuNaive();
-    VIRTUAL void forward(int batchSize, CLWrapper *inputWrapper, CLWrapper *selectorsWrapper, CLWrapper *outputWrapper);
-    PoolingForwardGpuNaive(EasyCL *cl, bool padZeros, int numPlanes, int inputSize, int poolingSize);
+    VIRTUAL void forward(int batchSize, easycl::CLWrapper *inputWrapper, easycl::CLWrapper *selectorsWrapper, easycl::CLWrapper *outputWrapper);
+    PoolingForwardGpuNaive(easycl::EasyCL *cl, bool padZeros, int numPlanes, int inputSize, int poolingSize);
 
     // [[[end]]]
 };

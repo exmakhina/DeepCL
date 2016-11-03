@@ -31,6 +31,7 @@
 #include "test/DimFromArgs.h"
 
 using namespace std;
+using namespace easycl;
 
 TEST(testbackward, squareloss) {
     // here's the plan:

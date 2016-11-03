@@ -15,6 +15,10 @@
 #include "loss/SoftMaxLayer.h"
 #include "layer/LayerMakers.h"
 
+#include <EasyCL.h>
+
+using namespace easycl;
+
 TEST( testNetdefToNet, empty ) {
     EasyCL *cl = DeepCLGtestGlobals_createEasyCL();
     NeuralNet *net = new NeuralNet(cl);

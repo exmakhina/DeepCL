@@ -12,11 +12,14 @@
 #include "clblas/ClBlasHelper.h"
 #include "conv/Im2Col.h"
 
+#include <EasyCL.h>
+
 #include <sstream>
 #include <iostream>
 #include <string>
 
 using namespace std;
+using namespace easycl;
 
 #undef VIRTUAL
 #undef STATIC

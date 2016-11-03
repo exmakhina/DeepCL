@@ -5,12 +5,15 @@
 #include <iostream>
 #include <string>
 
+#include <EasyCL.h>
+
 //#include "clblas/ClBlasInstance.h"
 #include "clblas/ClBlasHelper.h"
 #include "conv/Im2Col.h"
 #include "BackwardIm2Col.h"
 
 using namespace std;
+using namespace easycl;
 
 #undef STATIC
 #define STATIC 

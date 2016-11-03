@@ -18,6 +18,7 @@
 #include "loss/SoftMaxLayer.h"
 
 using namespace std;
+using namespace easycl;
 
 /* [[[cog
     # These are used in the later cog sections in this file:

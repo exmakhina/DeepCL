@@ -6,12 +6,13 @@
 
 #include <iostream>
 
-#include "EasyCL.h"
+#include <EasyCL.h>
 #include "util/StatefulTimer.h"
 #include "MultiplyBuffer.h"
 #include "util/stringhelper.h"
 
 using namespace std;
+using namespace easycl;
 
 #undef STATIC
 #undef VIRTUAL

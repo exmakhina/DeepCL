@@ -19,7 +19,10 @@
 #include "clmath/CopyBuffer.h"
 #include "layer/Layer.h"
 
+#include <EasyCL.h>
+
 using namespace std;
+using namespace easycl;
 
 #undef VIRTUAL
 #define VIRTUAL 

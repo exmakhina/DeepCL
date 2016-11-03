@@ -8,6 +8,8 @@
 
 #include "activate/ActivationForward.h"
 
+#include <EasyCL.h>
+
 #define VIRTUAL virtual
 #define STATIC static
 
@@ -19,8 +21,8 @@ public:
     // cog_addheaders.add()
     // ]]]
     // generated, using cog:
-    ActivationForwardCpu(EasyCL *cl, int numPlanes, int inputSize, ActivationFunction const*fn);
-    VIRTUAL void forward(int batchSize, CLWrapper *inputWrapper, CLWrapper *outputWrapper);
+    ActivationForwardCpu(easycl::EasyCL *cl, int numPlanes, int inputSize, ActivationFunction const*fn);
+    VIRTUAL void forward(int batchSize, easycl::CLWrapper *inputWrapper, easycl::CLWrapper *outputWrapper);
     VIRTUAL void forward(int batchSize, float *input, float *output);
 
     // [[[end]]]

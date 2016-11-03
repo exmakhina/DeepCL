@@ -11,9 +11,7 @@
 #include <iostream>
 #include <algorithm>
 
-class EasyCL;
-class CLKernel;
-class CLWrapper;
+#include <EasyCL.h>
 
 #define VIRTUAL virtual
 #define STATIC static
@@ -22,17 +20,17 @@ class CLWrapper;
 // nothing complicated :-)
 class CopyBuffer {
 public:
-    EasyCL *cl;
-    CLKernel *kernel;
+    easycl::EasyCL *cl;
+	easycl::CLKernel *kernel;
 
     // [[[cog
     // import cog_addheaders
     // cog_addheaders.add()
     // ]]]
     // generated, using cog:
-    VIRTUAL void copy(int N, CLWrapper *in, CLWrapper *out);
+    VIRTUAL void copy(int N, easycl::CLWrapper *in, easycl::CLWrapper *out);
     VIRTUAL ~CopyBuffer();
-    CopyBuffer(EasyCL *cl);
+    CopyBuffer(easycl::EasyCL *cl);
 
     // [[[end]]]
 };

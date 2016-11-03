@@ -12,6 +12,7 @@
 #include "DeepCLGtestGlobals.h"
 
 using namespace std;
+using namespace easycl;
 
 TEST( testDeepCLGtestGlobals, basic ) {
     cout << "There are " << DeepCLGtestGlobals::instance()->argc << " parameters: " << endl;

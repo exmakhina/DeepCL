@@ -4,6 +4,8 @@
 // v. 2.0. If a copy of the MPL was not distributed with this file, You can 
 // obtain one at http://mozilla.org/MPL/2.0/.
 
+#include <EasyCL.h>
+
 #include "batch/NetAction.h"
 #include "net/Trainable.h"
 #include "loaders/GenericLoaderv2.h"
@@ -12,6 +14,7 @@
 #include "batch/OnDemandBatcherv2.h"
 
 using namespace std;
+using namespace easycl;
 
 #undef STATIC
 #undef VIRTUAL

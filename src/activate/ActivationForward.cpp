@@ -6,7 +6,8 @@
 
 #include <iostream>
 
-#include "EasyCL.h"
+#include <EasyCL.h>
+
 #include "util/stringhelper.h"
 #include "activate/ActivationForwardCpu.h"
 #include "activate/ActivationForwardGpuNaive.h"
@@ -14,6 +15,8 @@
 #include "activate/ActivationForward.h"
 
 using namespace std;
+using namespace easycl;
+using namespace easycl;
 
 #undef VIRTUAL
 #define VIRTUAL 

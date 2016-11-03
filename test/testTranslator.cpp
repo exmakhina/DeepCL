@@ -6,6 +6,7 @@
 #include "patches/Translator.h"
 
 using namespace std;
+using namespace easycl;
 
 void go(string dataDir, string setName, int n, int translateRows, int translateCols) {
     int N;

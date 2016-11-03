@@ -30,6 +30,7 @@ typedef std::mt19937 MT19937;
 #endif
 
 using namespace std;
+using namespace easycl;
 
 class TestArgs{
 public:

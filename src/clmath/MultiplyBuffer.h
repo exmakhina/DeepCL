@@ -11,9 +11,9 @@
 #include <iostream>
 #include <algorithm>
 
-class EasyCL;
-class CLKernel;
-class CLWrapper;
+#include <EasyCL.h>
+
+
 
 #define VIRTUAL virtual
 #define STATIC static
@@ -22,17 +22,17 @@ class CLWrapper;
 // nothing complicated :-)
 class MultiplyBuffer {
 public:
-    EasyCL *cl;
-    CLKernel *kernel;
+    easycl::EasyCL *cl;
+    easycl::CLKernel *kernel;
 
     // [[[cog
     // import cog_addheaders
     // cog_addheaders.add()
     // ]]]
     // generated, using cog:
-    VIRTUAL void multiply(int N, float multiplier, CLWrapper *in, CLWrapper *out);
+    VIRTUAL void multiply(int N, float multiplier, easycl::CLWrapper *in, easycl::CLWrapper *out);
     VIRTUAL ~MultiplyBuffer();
-    MultiplyBuffer(EasyCL *cl);
+    MultiplyBuffer(easycl::EasyCL *cl);
 
     // [[[end]]]
 };

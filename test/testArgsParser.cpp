@@ -13,6 +13,7 @@
 #include "TestArgsParser.h"
 
 using namespace std;
+using namespace easycl;
 
 TestArgsParser::TestArgsParser() :
     argc(DeepCLGtestGlobals::instance()->argc),

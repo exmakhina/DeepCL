@@ -1,5 +1,6 @@
 #include <iostream>
 using namespace std;
+using namespace easycl;
 
 int main(int argc, char *argv[] ) {
     string mnistDir = argv[1];

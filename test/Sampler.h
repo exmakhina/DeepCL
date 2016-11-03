@@ -4,6 +4,8 @@
 #include <string>
 #include <iostream>
 
+#include <EasyCL.h>
+
 #include "layer/Layer.h"
 #include "util/RandomSingleton.h"
 
@@ -30,7 +32,7 @@ public:
             std::cout << label << ": weights[" << sampleIdx << "]=" << weights[sampleIdx] << std::endl;
         }
     }
-    static void sampleFloatWrapper( std::string label, CLWrapper *wrapper ) {
+    static void sampleFloatWrapper( std::string label, easycl::CLWrapper *wrapper ) {
         int N = wrapper->size();
         MT19937 random;
         random.seed(1);

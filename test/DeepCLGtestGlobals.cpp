@@ -9,6 +9,7 @@
 
 #include <iostream>
 using namespace std;
+using namespace easycl;
 
 DeepCLGtestGlobals *DeepCLGtestGlobals::instance() {
     static DeepCLGtestGlobals *thisInstance = new DeepCLGtestGlobals();

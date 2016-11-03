@@ -10,6 +10,7 @@
 #include "qlearning/QLearner.h"
 
 using namespace std;
+using namespace easycl;
 
 QLearner::QLearner(Trainer *trainer, Scenario *scenario, NeuralNet *net) :
         trainer(trainer),

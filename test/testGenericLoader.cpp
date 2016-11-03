@@ -13,6 +13,7 @@
 #include "normalize/NormalizationHelper.h"
 
 using namespace std;
+using namespace easycl;
 
 void go(string trainFilepath, int startN, int numExamples) {
     int N;

@@ -11,7 +11,8 @@
 #include <iostream>
 #include <algorithm>
 
-class EasyCL;
+#include <EasyCL.h>
+
 class NeuralNet;
 class Trainable;
 class EpochResult;
@@ -54,7 +55,7 @@ public:
 // create new ones
 class DeepCL_EXPORT Trainer{
 public:
-    EasyCL *cl; // NOT delete
+    easycl::EasyCL *cl; // NOT delete
 //    NeuralNet *net;
 
     float learningRate;
@@ -70,7 +71,7 @@ public:
     // cog_addheaders.add()
     // ]]]
     // generated, using cog:
-    Trainer(EasyCL *cl);
+    Trainer(easycl::EasyCL *cl);
     VIRTUAL ~Trainer();
     VIRTUAL void setLearningRate(float learningRate);
     VIRTUAL std::string asString();

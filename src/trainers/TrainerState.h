@@ -11,7 +11,7 @@
 #include <iostream>
 #include <algorithm>
 
-class CLWrapper;
+
 class TrainerStateMaker;
 
 #include "DeepCLDllExport.h"
@@ -24,7 +24,7 @@ class DeepCL_EXPORT TrainerState {
 public:
     // plausibly, we receive the current gradients, and current weights, and we 
     // can update them as we see fit...
-    // VIRTUAL void updateWeights(CLWrapper *gradients, CLWrapper *weights) = 0;
+    // VIRTUAL void updateWeights(CLWrapper *gradients, easycl::CLWrapper *weights) = 0;
 
     // [[[cog
     // import cog_addheaders

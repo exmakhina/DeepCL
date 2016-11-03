@@ -21,6 +21,7 @@
 #include "layer/LayerMaker.h"
 
 using namespace std;
+using namespace easycl;
 
 Layer *SquareLossMaker::createLayer(Layer *previousLayer) {
     return new SquareLossLayer(previousLayer, this);

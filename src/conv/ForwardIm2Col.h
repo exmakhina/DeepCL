@@ -18,13 +18,13 @@ class Im2Col;
 
 class DeepCL_EXPORT ForwardIm2Col : public Forward {
     private:
-//    CLKernel *kernelIm2Col;
-//    CLKernel *kernelCol2Im;
+//    easycl::CLKernel * kernelIm2Col;
+//    easycl::CLKernel * kernelCol2Im;
     AddBias *addBias;
     Im2Col *im2Col;
 
     float *columns;
-    CLWrapper *columnsWrapper;
+    easycl::CLWrapper *columnsWrapper;
     int numKernels;
 
     // [[[cog
@@ -34,9 +34,9 @@ class DeepCL_EXPORT ForwardIm2Col : public Forward {
     // generated, using cog:
 
     public:
-    ForwardIm2Col(EasyCL *cl, LayerDimensions dim);
+    ForwardIm2Col(easycl::EasyCL *cl, LayerDimensions dim);
     VIRTUAL ~ForwardIm2Col();
-    VIRTUAL void forward(int batchSize, CLWrapper *dataWrapper, CLWrapper *weightsWrapper, CLWrapper *biasWrapper, CLWrapper *outputWrapper);
+    VIRTUAL void forward(int batchSize, easycl::CLWrapper *dataWrapper, easycl::CLWrapper *weightsWrapper, easycl::CLWrapper *biasWrapper, easycl::CLWrapper *outputWrapper);
 
     // [[[end]]]
 };

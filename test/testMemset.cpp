@@ -9,6 +9,7 @@
 #include "EasyCL.h"
 
 using namespace std;
+using namespace easycl;
 
 TEST( testMemset, basic ) {
     EasyCL *cl = DeepCLGtestGlobals_createEasyCL();

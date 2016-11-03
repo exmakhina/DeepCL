@@ -11,12 +11,12 @@
 #define VIRTUAL virtual
 #define STATIC static
 
-class EasyCL;
-class CLWrapper;
+#include <EasyCL.h>
+
 
 class DeepCL_EXPORT PoolingBackward {
 public:
-    EasyCL *cl;
+    easycl::EasyCL *cl;
 
     const bool padZeros;
     const int numPlanes;
@@ -45,14 +45,14 @@ public:
     // cog_addheaders.add()
     // ]]]
     // generated, using cog:
-    STATIC PoolingBackward *instance(EasyCL *cl, bool padZeros, int numPlanes, int inputSize, int poolingSize);
-    STATIC PoolingBackward *instanceForTest(EasyCL *cl, bool padZeros, int numPlanes, int inputSize, int poolingSize);
-    STATIC PoolingBackward *instanceSpecific(int idx, EasyCL *cl, bool padZeros, int numPlanes, int inputSize, int poolingSize);
-    PoolingBackward(EasyCL *cl, bool padZeros, int numPlanes, int inputSize, int poolingSize);
+    STATIC PoolingBackward *instance(easycl::EasyCL *cl, bool padZeros, int numPlanes, int inputSize, int poolingSize);
+    STATIC PoolingBackward *instanceForTest(easycl::EasyCL *cl, bool padZeros, int numPlanes, int inputSize, int poolingSize);
+    STATIC PoolingBackward *instanceSpecific(int idx, easycl::EasyCL *cl, bool padZeros, int numPlanes, int inputSize, int poolingSize);
+    PoolingBackward(easycl::EasyCL *cl, bool padZeros, int numPlanes, int inputSize, int poolingSize);
     VIRTUAL int getInputNumElements(int batchSize);
     VIRTUAL int getOutputNumElements(int batchSize);
     VIRTUAL void backward(int batchSize, float *gradOutput, int *selectors, float *gradInput);
-    VIRTUAL void backward(int batchSize, CLWrapper *gradOutputWrapper, CLWrapper *selectorsWrapper, CLWrapper *gradInputWrapper);
+    VIRTUAL void backward(int batchSize, easycl::CLWrapper *gradOutputWrapper, easycl::CLWrapper *selectorsWrapper, easycl::CLWrapper *gradInputWrapper);
 
     // [[[end]]]
 };

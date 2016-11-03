@@ -11,8 +11,8 @@
 
 #include "layer/Layer.h"
 
-class CLKernel;
-class CLWrapper;
+
+
 class PoolingForward;
 class PoolingBackward;
 class RandomTranslationsMaker;

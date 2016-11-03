@@ -13,8 +13,8 @@
 
 #include "trainers/TrainerState.h"
 
-class EasyCL;
-class CLKernel;
+#include <EasyCL.h>
+
 
 #include "DeepCLDllExport.h"
 
@@ -28,8 +28,8 @@ public:
     float *sumGradSquared;
     float *sumUpdateSquared;
 
-    CLWrapper *sumGradSquaredWrapper;
-    CLWrapper *sumUpdateSquaredWrapper;
+    easycl::CLWrapper *sumGradSquaredWrapper;
+    easycl::CLWrapper *sumUpdateSquaredWrapper;
 
     // [[[cog
     // import cog_addheaders
@@ -37,7 +37,7 @@ public:
     // ]]]
     // generated, using cog:
     VIRTUAL ~AdadeltaState();
-    AdadeltaState(EasyCL *cl, int numWeights);
+    AdadeltaState(easycl::EasyCL *cl, int numWeights);
 
     // [[[end]]]
 };

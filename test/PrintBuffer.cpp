@@ -15,6 +15,7 @@
 #include <algorithm>
 
 using namespace std;
+using namespace easycl;
 
 void PrintBuffer::printFloats(EasyCL *cl, CLWrapper *buffer, int rows, int cols) {
     // first we will copy it to another buffer, so we can copy it out

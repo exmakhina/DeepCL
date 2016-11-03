@@ -14,7 +14,7 @@ public:
     static DeepCLGtestGlobals *instance();
 };
 
-#include "EasyCL.h"
+#include <EasyCL.h>
 
-EasyCL *DeepCLGtestGlobals_createEasyCL();
+easycl::EasyCL *DeepCLGtestGlobals_createEasyCL();
 

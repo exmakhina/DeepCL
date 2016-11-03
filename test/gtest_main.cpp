@@ -13,6 +13,7 @@
 #include "test/DeepCLGtestGlobals.h"
 
 using namespace std;
+using namespace easycl;
 
 string cmdline;
 

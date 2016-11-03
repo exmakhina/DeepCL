@@ -7,11 +7,13 @@
 #include <iostream>
 
 #include "util/StatefulTimer.h"
-#include "EasyCL.h"
 #include "clmath/GpuOp.h"
 #include "templates/LuaTemplater.h"
 
+#include <EasyCL.h>
+
 using namespace std;
+using namespace easycl;
 
 #undef STATIC
 #undef VIRTUAL

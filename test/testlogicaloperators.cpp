@@ -2,7 +2,10 @@
 //#include "ClConvolve.h"
 
 #include <iostream>
-using namespace std;
+
+#include <DeepCL.h>
+
+using namespace std; using namespace easycl;
 
 #include "gtest/gtest.h"
 

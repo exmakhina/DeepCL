@@ -9,6 +9,7 @@
 #include "fc/FullyConnectedMaker.h"
 
 using namespace std;
+using namespace easycl;
 
 Layer *FullyConnectedMaker::createLayer(Layer *previousLayer) {
     return new FullyConnectedLayer(cl, previousLayer, this);

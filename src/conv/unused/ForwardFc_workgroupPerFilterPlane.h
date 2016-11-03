@@ -10,8 +10,8 @@
 
 class ForwardFc_workgroupPerFilterPlane : public Forward {
 public:
-    CLKernel *kernel1;
-    CLKernel *kernel2;
+    easycl::CLKernel * kernel1;
+    easycl::CLKernel * kernel2;
 
     // [[[cog
     // import cog_addheaders
@@ -19,8 +19,8 @@ public:
     // ]]]
     // generated, using cog:
     VIRTUAL ~ForwardFc_workgroupPerFilterPlane();
-    VIRTUAL void forward(int batchSize, CLWrapper *dataWrapper, CLWrapper *weightsWrapper, CLWrapper *biasWrapper, CLWrapper *outputWrapper);
-    ForwardFc_workgroupPerFilterPlane(EasyCL *cl, LayerDimensions dim);
+    VIRTUAL void forward(int batchSize, easycl::CLWrapper *dataWrapper, easycl::CLWrapper *weightsWrapper, easycl::CLWrapper *biasWrapper, easycl::CLWrapper *outputWrapper);
+    ForwardFc_workgroupPerFilterPlane(easycl::EasyCL *cl, LayerDimensions dim);
 
     // [[[end]]]
 };

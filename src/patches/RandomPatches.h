@@ -11,8 +11,8 @@
 #define VIRTUAL virtual
 #define STATIC static
 
-class CLKernel;
-class CLWrapper;
+
+
 class PoolingForward;
 class PoolingBackward;
 class RandomPatchesMaker;

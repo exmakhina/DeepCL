@@ -10,7 +10,7 @@
 #include <iostream>
 #include <string>
 
-#include "EasyCL.h"
+#include <EasyCL.h>
 #include "activate/ActivationFunction.h"
 #include "conv/Backward.h"
 #include "conv/LayerDimensions.h"
@@ -27,7 +27,7 @@ using namespace std;
 
 class DeepCL_EXPORT BackwardAuto : public Backward {
 public:
-//    EasyCL *cl;
+//    easycl::EasyCL *cl;
 //    LayerDimensions dim;
 //    ActivationFunction const*fn;
 
@@ -43,11 +43,11 @@ public:
     // cog_addheaders.add()
     // ]]]
     // generated, using cog:
-    BackwardAuto(EasyCL *cl, LayerDimensions dim);
+    BackwardAuto(easycl::EasyCL *cl, LayerDimensions dim);
     VIRTUAL ~BackwardAuto();
     VIRTUAL void backward(
-    int batchSize, CLWrapper *inputDataWrapper, CLWrapper *gradOutput, CLWrapper *weightsWrapper,
-    CLWrapper *gradInput);
+    int batchSize, easycl::CLWrapper *inputDataWrapper, easycl::CLWrapper *gradOutput, easycl::CLWrapper *weightsWrapper,
+    easycl::CLWrapper *gradInput);
 
     // [[[end]]]
 

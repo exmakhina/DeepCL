@@ -1,25 +1,25 @@
 #pragma once
 
 #include "BackpropWeights.h"
-//#include "EasyCL.h"
+//#include <EasyCL.h>
 
 #include "DeepCLDllExport.h"
 
 class Im2Col;
-class CLWrapper;
-class EasyCL;
-class CLKernel;
+
+#include <EasyCL.h>
+
 
 #define STATIC static
 #define VIRTUAL virtual
 
 class DeepCL_EXPORT BackpropWeightsIm2Col : public BackpropWeights {
     private:
-//    CLKernel *kernelIm2Col;
+//    easycl::CLKernel * kernelIm2Col;
     Im2Col *im2Col;
 
     float *columns;
-    CLWrapper *columnsWrapper;
+    easycl::CLWrapper *columnsWrapper;
     int numKernels;
 
     // [[[cog
@@ -29,9 +29,9 @@ class DeepCL_EXPORT BackpropWeightsIm2Col : public BackpropWeights {
     // generated, using cog:
 
     public:
-    BackpropWeightsIm2Col(EasyCL *cl, LayerDimensions dim);
+    BackpropWeightsIm2Col(easycl::EasyCL *cl, LayerDimensions dim);
     VIRTUAL ~BackpropWeightsIm2Col();
-    VIRTUAL void calcGradWeights(int batchSize, CLWrapper *gradOutputWrapper, CLWrapper *inputWrapper, CLWrapper *gradWeightsWrapper, CLWrapper *gradBiasWrapper);
+    VIRTUAL void calcGradWeights(int batchSize, easycl::CLWrapper *gradOutputWrapper, easycl::CLWrapper *inputWrapper, easycl::CLWrapper *gradWeightsWrapper, easycl::CLWrapper *gradBiasWrapper);
 
     // [[[end]]]
 };

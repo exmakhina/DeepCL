@@ -1,13 +1,16 @@
 //#include "clblas/ClBlasInstance.h"
 #include "clblas/ClBlasHelper.h"
-#include "EasyCL.h"
 #include "templates/TemplatedKernel.h"
 
 #include "Im2Col.h"
 
+#include <EasyCL.h>
+
 #include <iostream>
 #include <stdexcept>
+
 using namespace std;
+using namespace easycl;
 
 #undef STATIC
 #undef VIRTUAL

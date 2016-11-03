@@ -18,6 +18,7 @@
 #include "WeightsPersister.h"
 
 using namespace std;
+using namespace easycl;
 
 int myrank = 0;
 int mysize = 1;

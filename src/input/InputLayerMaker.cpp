@@ -10,6 +10,7 @@
 #include "input/InputLayer.h"
 
 using namespace std;
+using namespace easycl;
 
 Layer *InputLayerMaker::createLayer(Layer *previousLayer) {
     return new InputLayer(this);

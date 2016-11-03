@@ -6,6 +6,7 @@
 #include "patches/PatchExtractor.h"
 
 using namespace std;
+using namespace easycl;
 
 void go(string dataDir, string setName, int n, int patchSize, int patchRow, int patchCol) {
     int N;

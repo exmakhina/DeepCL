@@ -9,6 +9,7 @@
 #include "normalize/NormalizationLayerMaker.h"
 
 using namespace std;
+using namespace easycl;
 
 Layer *NormalizationLayerMaker::createLayer(Layer *previousLayer) {
     return new NormalizationLayer(previousLayer, this);

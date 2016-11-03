@@ -14,6 +14,7 @@
 #include "batch/BatchData.h"
 
 using namespace std;
+using namespace easycl;
 
 float EpochMaker::run(int epoch) {
     if(_labels != 0) {

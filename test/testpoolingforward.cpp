@@ -14,6 +14,7 @@
 #include "test/WeightRandomizer.h"
 
 using namespace std;
+using namespace easycl;
 
 namespace testpoolingforward {
 

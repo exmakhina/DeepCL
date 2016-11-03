@@ -28,6 +28,7 @@
 #include "test/TestArgsParser.h"
 
 using namespace std;
+using namespace easycl;
 
 void checkWeightsUpdate(NeuralNet *net, int targetLayerIndex) {
     // here's the plan:

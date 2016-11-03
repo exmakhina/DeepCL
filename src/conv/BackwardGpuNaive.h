@@ -1,16 +1,16 @@
 #pragma once
 
 #include "Backward.h"
-#include "EasyCL.h"
+#include <EasyCL.h>
 
 #define STATIC static
 #define VIRTUAL virtual
 
 class BackwardGpuNaive : public Backward {
 public:
-    CLKernel *kernel;
-//    CLKernel *broadcastMultiply;
-//    CLKernel *applyActivationDeriv;
+    easycl::CLKernel *kernel;
+//    easycl::CLKernel * broadcastMultiply;
+//    easycl::CLKernel * applyActivationDeriv;
 
     // [[[cog
     // import cog_addheaders
@@ -19,9 +19,9 @@ public:
     // generated, using cog:
     VIRTUAL ~BackwardGpuNaive();
     VIRTUAL void backward(int batchSize,
-    CLWrapper *inputDataWrapper, CLWrapper *gradOutputWrapper, CLWrapper *weightsWrapper,
-    CLWrapper *gradInputWrapper);
-    BackwardGpuNaive(EasyCL *cl, LayerDimensions dim);
+    easycl::CLWrapper *inputDataWrapper, easycl::CLWrapper *gradOutputWrapper, easycl::CLWrapper *weightsWrapper,
+    easycl::CLWrapper *gradInputWrapper);
+    BackwardGpuNaive(easycl::EasyCL *cl, LayerDimensions dim);
 
     // [[[end]]]
 };

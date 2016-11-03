@@ -6,13 +6,15 @@
 
 #include <iostream>
 
-#include "EasyCL.h"
+#include <EasyCL.h>
+
 #include "CLFloatWrapper.h"
 #include "util/stringhelper.h"
 #include "clmath/GpuOp.h"
 #include "clmath/CLMathWrapper.h"
 
 using namespace std;
+using namespace easycl;
 
 #undef STATIC
 #undef VIRTUAL

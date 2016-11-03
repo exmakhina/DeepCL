@@ -6,12 +6,11 @@
 
 #pragma once
 
-class EasyCL;
-class CLWrapper;
+#include <EasyCL.h>
 
 class PrintBuffer {
 public:
-    static void printFloats( EasyCL *cl, CLWrapper *buffer, int rows, int cols );
-    static void printInts( EasyCL *cl, CLWrapper *buffer, int rows, int cols );
+    static void printFloats( easycl::EasyCL *cl, easycl::CLWrapper *buffer, int rows, int cols );
+    static void printInts( easycl::EasyCL *cl, easycl::CLWrapper *buffer, int rows, int cols );
 };
 

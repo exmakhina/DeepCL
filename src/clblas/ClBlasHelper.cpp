@@ -1,10 +1,12 @@
 #include "util/stringhelper.h"
 #include "ClBlasHelper.h"
 
-#include "EasyCL.h"
+#include <EasyCL.h>
+using namespace easycl;
 
 #include <iostream>
 using namespace std;
+using namespace easycl;
 
 #undef STATIC
 #undef VIRTUAL

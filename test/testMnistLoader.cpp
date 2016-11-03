@@ -8,6 +8,7 @@
 #include "test/myasserts.h"
 
 using namespace std;
+using namespace easycl;
 
 TEST( testMnistLoader, readwriteuint ) {
     unsigned char fakedata[8];

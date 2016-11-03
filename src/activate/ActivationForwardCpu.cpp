@@ -7,13 +7,14 @@
 #include <iostream>
 #include <cstring>
 
-#include "EasyCL.h"
+#include <EasyCL.h>
 #include "util/StatefulTimer.h"
 #include "activate/ActivationFunction.h"
 
 #include "activate/ActivationForwardCpu.h"
 
 using namespace std;
+using namespace easycl;
 
 #undef VIRTUAL
 #define VIRTUAL 
